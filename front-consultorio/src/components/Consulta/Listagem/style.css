@@ -1,0 +1,32 @@
+:root {
+    --primary-green: #00856F;
+    --primary-green-light: #DCE9E2;
+    --primary-green-light-2: #F7F9F9;
+    --primary-beige: #FFFAF1;
+    --primary-green-hover: #00453A;
+    --secondary-grey: #061800;
+    --secondary-grey-2: #384633;
+    --secondary-white: #FFF;
+  }
+  .wrapper {
+    width: 100%;
+    max-width: 80%;
+    margin: 0 auto;
+  }
+  
+  .consultas-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .consultas-table th,
+  .consultas-table td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .consultas-table th {
+    background-color: var(--primary-green-light);
+  }
+  

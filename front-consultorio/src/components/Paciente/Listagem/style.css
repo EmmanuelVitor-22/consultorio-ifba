@@ -1,0 +1,77 @@
+:root {
+  --primary-green: #00856F;
+  --primary-green-light: #DCE9E2;
+  --primary-green-light-2: #F7F9F9;
+  --primary-beige: #FFFAF1;
+  --primary-green-hover: #00453A;
+  --secondary-grey: #061800;
+  --secondary-grey-2: #384633;
+  --secondary-white: #FFF;
+}
+.wrapper {
+  width: 100%;
+  max-width: 80%;
+  margin: 0 auto;
+}
+.pacientes-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.pacientes-table th,
+.pacientes-table td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.pacientes-table th {
+  background-color: var(--primary-green-light);
+}
+
+.pacientes-table button {
+  margin-right: 4px;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.page-button {
+  background-color: var(--primary-green);
+  color: var(--secondary-white);
+  border: none;
+  padding: 8px 16px;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.page-button:hover {
+  background-color: var(--primary-green-hover);
+}
+
+.btn-list{
+  background-color: #00856F;
+  color: #FFF;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.form-button:hover {
+  background-color: #00453A;
+}
+.paginacao{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-top: 20px;
+ justify-content: space-evenly;
+ align-items: center;
+ font-size: 16px;
+ font-weight: 600;
+}
