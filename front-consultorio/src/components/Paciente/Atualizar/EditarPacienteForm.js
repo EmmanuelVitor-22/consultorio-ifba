@@ -17,7 +17,7 @@ const EditarPacienteForm = ({ pacienteId }) => {
   });
 
   useEffect(() => {
-    const fetchPaciente = async () => {
+    const fetchPaciente = async (id) => {
       try {
         const response = await axios.get(`http://localhost:8080/pacientes/${pacienteId}`);
         const paciente = response.data;
@@ -39,6 +39,17 @@ const EditarPacienteForm = ({ pacienteId }) => {
     setPacienteData((prevData) => ({
       ...prevData,
       [name]: value
+    }));
+  };
+
+  const handleEnderecoChange = (e) => {
+    const { name, value } = e.target;
+    setPacienteData((prevData) => ({
+      ...prevData,
+      endereco: {
+        ...prevData.endereco,
+        [name]: value
+      }
     }));
   };
 
@@ -70,9 +81,9 @@ const EditarPacienteForm = ({ pacienteId }) => {
           <input
             type="text"
             id="logradouro"
-            name="endereco.logradouro"
+            name="logradouro"
             value={pacienteData.endereco.logradouro}
-            onChange={handleChange}
+            onChange={handleEnderecoChange}
           />
         </div>
         <div>
@@ -80,9 +91,9 @@ const EditarPacienteForm = ({ pacienteId }) => {
           <input
             type="text"
             id="numero"
-            name="endereco.numero"
+            name="numero"
             value={pacienteData.endereco.numero}
-            onChange={handleChange}
+            onChange={handleEnderecoChange}
           />
         </div>
         <div>
@@ -90,9 +101,9 @@ const EditarPacienteForm = ({ pacienteId }) => {
           <input
             type="text"
             id="complemento"
-            name="endereco.complemento"
+            name="complemento"
             value={pacienteData.endereco.complemento}
-            onChange={handleChange}
+            onChange={handleEnderecoChange}
           />
         </div>
         <div>
@@ -100,9 +111,9 @@ const EditarPacienteForm = ({ pacienteId }) => {
           <input
             type="text"
             id="bairro"
-            name="endereco.bairro"
+            name="bairro"
             value={pacienteData.endereco.bairro}
-            onChange={handleChange}
+            onChange={handleEnderecoChange}
           />
         </div>
         <div>
@@ -110,9 +121,9 @@ const EditarPacienteForm = ({ pacienteId }) => {
           <input
             type="text"
             id="cidade"
-            name="endereco.cidade"
+            name="cidade"
             value={pacienteData.endereco.cidade}
-            onChange={handleChange}
+            onChange={handleEnderecoChange}
           />
         </div>
         <div>
@@ -120,9 +131,9 @@ const EditarPacienteForm = ({ pacienteId }) => {
           <input
             type="text"
             id="uf"
-            name="endereco.uf"
+            name="uf"
             value={pacienteData.endereco.uf}
-            onChange={handleChange}
+            onChange={handleEnderecoChange}
           />
         </div>
         <div>
@@ -130,9 +141,9 @@ const EditarPacienteForm = ({ pacienteId }) => {
           <input
             type="text"
             id="cep"
-            name="endereco.cep"
+            name="cep"
             value={pacienteData.endereco.cep}
-            onChange={handleChange}
+            onChange={handleEnderecoChange}
           />
         </div>
         <button type="submit">Atualizar Paciente</button>

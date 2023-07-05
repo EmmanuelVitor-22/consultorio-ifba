@@ -31,7 +31,7 @@ const CadastroPacienteForm = () => {
 
   return (
     <div className='wrapper'>
-      <h2 className='form-title'>Cadastre um novo Paciente</h2>
+      <h2 className='form-title'>Cadastre Paciente</h2>
       <hr></hr>
       <form onSubmit={handleSubmit(onSubmit)}>
         <label className="form-label">

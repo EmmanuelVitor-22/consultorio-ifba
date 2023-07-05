@@ -27,7 +27,7 @@ const ConsultaForm = () => {
 
   return (
     <div className='wrapper'>
-      <h2 className='form-title'>Cadastrar Médico</h2>
+      <h2 className='form-title'>Cadastrar Consulta</h2>
       <ToastContainer />
       <form onSubmit={handleSubmit(onSubmit)} className="form">
         <div className="form-group">
