@@ -12,12 +12,12 @@ const MedicoForm = () => {
   const onSubmit = (data) => {
     axios.post('http://localhost:8080/medicos/cadastrar', data)
       .then(response => {
-        console.log(response.data); // Dados retornados pela API após o cadastro do médico
+        console.log(response.data); 
         toast.success('Cadastro realizado com sucesso!');
         reset();
       })
       .catch(error => {
-        console.log(error); // Trate ou exiba o erro ocorrido durante o cadastro
+        console.log(error); 
         toast.error("Cadastro não realizado, verifique os campos.")
       });
   };
@@ -76,7 +76,7 @@ const MedicoForm = () => {
           <option value="Dermatologia">Dermatologia</option>
           <option value="Cardiologia">Cardiologia</option>
           <option value="Ortopedia">Ortopedia</option>
-          {/* Adicione outras especialidades aqui */}
+        
         </select>
         {errors.especialidade && <span className="form-error-message">{errors.especialidade.message}</span>}
 

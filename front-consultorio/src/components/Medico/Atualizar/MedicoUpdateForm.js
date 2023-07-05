@@ -70,7 +70,7 @@ const MedicoUpdateForm = ({ medicos }) => {
     <div>
       <h2>Atualizar Médico</h2>
       <form onSubmit={handleSubmit}>
-        {/* Resto do código do formulário */}
+        
       </form>
       <ToastContainer />
     </div>

@@ -13,7 +13,7 @@ const CadastroPacienteForm = () => {
   const onSubmit = async (data) => {
     try {
       console.log(data);
-      // Enviar os dados para a API
+     
       const response = await axios.post('http://localhost:8080/pacientes/cadastrar', data);
       console.log('Resposta da API:', response.data);
       toast.success('Cadastro realizado com sucesso!');
